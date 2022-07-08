@@ -40,9 +40,9 @@ const Navbar = () => {
                     <a
                       className={`${
                         router.pathname === navLink.path
-                          ? "lg:border-b-4 lg:border-rose-600"
+                          ? "lg:border-b-rose-600"
                           : ""
-                      } lg:inline-flex lg:w-auto w-full px-3 py-2 lg:py-0 text-white font-bold items-center justify-center transition duration-500 hover:bg-rose-600 hover:rounded `}
+                      } lg:inline-flex lg:w-auto lg:border-4 lg:border-slate-900 w-full px-3 py-2 lg:py-0 text-white font-bold items-center justify-center transition duration-500 hover:bg-rose-600 hover:rounded hover:border-rose-600`}
                     >
                       {navLink.title}
                     </a>
