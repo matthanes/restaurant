@@ -9,6 +9,7 @@ module.exports = {
       layoutRaw: true,
     },
   },
+  basePath: '/restaurant',
   nextConfig,
   trailingSlash: true,
   images: {
