@@ -9,7 +9,7 @@ module.exports = {
       layoutRaw: true,
     },
   },
-  basePath: '/restaurant',
+  basePath: '/restaurant', //if deploying to a sub-directory, e.g. /restaurant/
   nextConfig,
   trailingSlash: true,
   images: {
