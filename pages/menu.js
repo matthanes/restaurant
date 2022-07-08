@@ -1,5 +1,7 @@
 import Head from "next/head";
 import menuData from "../components/data/menudata.json";
+import MenuParser from "../components/MenuParser";
+
 const menu = () => {
   return (
     <>
@@ -13,37 +15,14 @@ const menu = () => {
         <section className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-x-40 p-8">
           <div>
             <h2 className="font-montaga font-extrabold text-xl bg-rose-600 rounded py-2 mb-2 text-center">Clay Oven Specialties</h2>
-            {menuData
-              .filter((item) => item.category === "clayoven")
-              .map((dish, index) => (
-                <article
-                  className="flex flex-wrap items-center justify-between mb-8 col-span-1"
-                  key={index}
-                >
-                  <h2 className="text-lg font-montaga uppercase font-semibold grow m-0">{dish.name}</h2>
-                  <p className="font-semibold">${dish.price}</p>
-                  <p className="font-sans flex flex-1 basis-full text-justify mt-3">
-                    {dish.description}
-                  </p>
-                </article>
-              ))}
+            <MenuParser menuData={menuData} filter="clayoven" />    
           </div>
           <div>
           <h2 className="font-montaga font-extrabold text-xl bg-rose-600 rounded py-2 mb-2 text-center">Entrees</h2>
-            {menuData
-              .filter((item) => item.category === "entrees-chicken")
-              .map((dish, index) => (
-                <article
-                  className="flex flex-wrap items-center justify-between mb-6 col-span-1"
-                  key={index}
-                >
-                  <h2 className="text-lg font-montaga uppercase font-semibold grow m-0">{dish.name}</h2>
-                  <p className="font-semibold">${dish.price}</p>
-                  <p className="flex flex-1 basis-full text-justify mt-3">
-                    {dish.description}
-                  </p>
-                </article>
-              ))}
+          <h3 className="text-2xl font-montaga font-bold underline underline-offset-4 mb-3 text-center">Chicken Dishes</h3>
+          <MenuParser menuData={menuData} filter="entrees-chicken" />   
+          <h3 className="text-2xl font-montaga font-bold underline underline-offset-4 mb-3 text-center">Lamb Dishes</h3>
+          <MenuParser menuData={menuData} filter="entrees-lamb" />   
           </div>
         </section>
       </main>
