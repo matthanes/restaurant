@@ -10,6 +10,7 @@ module.exports = {
     },
   },
   basePath: '/restaurant', //if deploying to a sub-directory, e.g. /restaurant/
+  assetPrefix: '/restaurant/', //if deploying to a sub-directory, e.g. /restaurant/
   nextConfig,
   trailingSlash: true,
   images: {

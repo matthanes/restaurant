@@ -14,7 +14,7 @@ export default function Home() {
 
       <main className="relative min-h-screen lg:min-h-0">
         <ExportedImage
-          src="/restaurant/images/tikkanaan.jpg"
+          src="/images/tikkanaan.jpg"
           layout="raw"
           width={1920}
           height={1080}
