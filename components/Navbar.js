@@ -38,6 +38,7 @@ const Navbar = () => {
                 return (
                   <Link key={index} href={navLink.path}>
                     <a
+                      onClick={handleClick}
                       className={`${
                         router.pathname === navLink.path
                           ? "lg:border-b-rose-600"
