@@ -13,7 +13,10 @@ module.exports = {
         montaga: ["Montaga", "ui-serif"],
       },
       height: {
-        'fullpage': 'calc(100vh - 9.25rem)',
+        fullpage: "calc(100vh - 9.25rem)",
+      },
+      minHeight: {
+        fullpage: "calc(100vh - 9.25rem)",
       },
     },
   },
