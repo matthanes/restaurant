@@ -24,7 +24,7 @@ export default function Home() {
         <div className="absolute inset-0 w-full h-full min-h-screen lg:min-h-0 bg-slate-900 bg-opacity-80 flex justify-center items-center">
           <section className="text-white">
             <h1 className="text-8xl text-center font-montez my-8 px-4">Taste of India</h1>
-            <p className="text-3xl text-center font-montaga px-4">Taste of India is your home for authentic Indian Cuisine.</p>
+            <p className="text-3xl text-center font-montaga px-4">Your home for authentic Indian Cuisine.</p>
           </section>
         </div>
       </main>

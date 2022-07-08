@@ -10,7 +10,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta name="description" content="Taste of India is your home for authentic Indian Cuisine in Columbus, Georgia." />
+          <meta
+            name="description"
+            content="Taste of India is your home for authentic Indian Cuisine in Columbus, Georgia."
+          />
         </Head>
         <body>
           <Main />

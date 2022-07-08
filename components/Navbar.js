@@ -2,6 +2,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Logo from "./Logo";
+import Hamburger from "./Hamburger";
+import Button from "./Button";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -22,40 +24,15 @@ const Navbar = () => {
       <nav className="bg-slate-900 font-montaga">
         <div className="flex items-center flex-wrap justify-between bg-slate-900 p-4 max-w-6xl mx-auto">
           <Logo />
-
-          {/* Hamburger and X Button */}
-          <button
-            className="flex flex-col p-3 hover:bg-rose-600 rounded lg:hidden text-white hover:text-white outline-none"
-            onClick={handleClick}
-          >
-            <div
-              className={`h-1 w-6 my-[.1875rem] rounded-full bg-white transition ease transform duration-300 ${
-                active
-                  ? "rotate-45 translate-y-[.625rem] opacity-75 group-hover:opacity-100"
-                  : "opacity-75 group-hover:opacity-100"
-              }`}
-            />
-            <div
-              className={`h-1 w-6 my-[.1875rem] rounded-full bg-white transition ease transform duration-300 ${
-                active ? "opacity-0" : "opacity-75 group-hover:opacity-100"
-              }`}
-            />
-            <div
-              className={`h-1 w-6 my-[.1875rem] rounded-full bg-white transition ease transform duration-300 ${
-                active
-                  ? "-rotate-45 -translate-y-[.625rem] opacity-75 group-hover:opacity-100"
-                  : "opacity-75 group-hover:opacity-100"
-              }`}
-            />
-          </button>
+          <Hamburger handleClick={handleClick} active={active} />
 
           {/* Nav Links */}
           <div
             className={`${
               active ? "" : "hidden"
-            }   w-full lg:flex lg:flex-grow lg:w-auto lg:items-center lg:justify-end `}
+            } my-8 w-full lg:flex lg:flex-grow lg:w-auto lg:items-center lg:justify-end lg:my-0 `}
           >
-            <div className="lg:flex lg:flex-row lg:w-auto w-full flex flex-col lg:h-auto lg:gap-x-6">
+            <div className="w-full flex flex-col items-center text-center text-2xl gap-y-4 lg:text-base lg:flex lg:flex-row lg:w-auto lg:h-auto lg:gap-x-6">
               {/* Map Through navLinks */}
               {navLinks.map((navLink, index) => {
                 return (
@@ -73,12 +50,7 @@ const Navbar = () => {
                 );
               })}
 
-              {/* Add Call Now at the end of Navbar */}
-              <Link href="tel:(706) 940-0044">
-                <a className="lg:inline-flex lg:w-auto lg:ml-8 w-full px-3 py-2 rounded text-white font-bold items-center justify-center lg:bg-rose-700 hover:bg-rose-600 hover:text-white">
-                  Call Now
-                </a>
-              </Link>
+              <Button href="tel:(706) 940-0044" text="Call Now" />
             </div>
           </div>
         </div>
