@@ -1,0 +1,86 @@
+[
+  {
+    "category": "clayoven",
+    "name": "Chicken Tikka",
+    "description": "Boneless cubes of chicken flavored with Indian spices skewered and cooked in an authentic Indian clay oven",
+    "price": 12.99,
+    "spicy": "Y"
+  },
+  {
+    "category": "clayoven",
+    "name": "Tandoori Chicken",
+    "description": "Check with bone dish marinated in freshly ground spices and cooked in an authentic Indian clay oven",
+    "price": 12.99,
+    "spicy": "Y"
+  },
+  {
+    "category": "clayoven",
+    "name": "Sheek Kabob",
+    "description": "Minced chicken kabob, skewered and smoked in tanddor",
+    "price": 12.99,
+    "spicy": "Y"
+  },
+  {
+    "category": "clayoven",
+    "name": "Shrimp Tandoori",
+    "description": "Brochettes of shrimp and vegetables, grilled",
+    "price": 14.99,
+    "spicy": "Y"
+  },
+  {
+    "category": "clayoven",
+    "name": "Tandoori Mixed Grill",
+    "description": "Delicious combinations of chicken and seafood cooked in tandoorm, served with naan",
+    "price": 15.99,
+    "spicy": "Y"
+  },
+  {
+    "category": "clayoven",
+    "name": "Fish Tikka",
+    "description": "Fresh fish fillets marinated in spiced yogurt and grilled",
+    "price": 14.99,
+    "spicy": "Y"
+  },
+  {
+    "category": "entrees-chicken",
+    "name": "Kadai Chicken",
+    "description": "Cubes of chicken tossed in a skillet with bell peppers and onions",
+    "price": 12.99,
+    "spicy": "Y"
+  },
+  {
+    "category": "entrees-chicken",
+    "name": "Saag Chicken",
+    "description": "Pieces of chicken cooked in a creamy spinach sauce",
+    "price": 12.99,
+    "spicy": "Y"
+  },
+  {
+    "category": "entrees-chicken",
+    "name": "Chicken Curry",
+    "description": "Chicken finished with homemade onion and tomato curry",
+    "price": 11.99,
+    "spicy": "Y"
+  },
+  {
+    "category": "entrees-lamb",
+    "name": "Lamb Kadai",
+    "description": "Pieces of lamb tossed in a skillet with bell peppers and onions",
+    "price": 13.99,
+    "spicy": "Y"
+  },
+  {
+    "category": "entrees-lamb",
+    "name": "Lamb Vindaloo",
+    "description": "A very spicy, tangy, lamb and potato curry",
+    "price": 13.99,
+    "spicy": "Y"
+  },
+  {
+    "category": "entrees-lamb",
+    "name": "Lamb Palak",
+    "description": "Cubes of lamb and spinach cooked in a creamy sauce",
+    "price": 13.99,
+    "spicy": "Y"
+  }
+]
