@@ -2,8 +2,8 @@ import { FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-600 p-2 h-[4.75rem] text-white">
-      <div className="flex justify-around max-w-6xl mx-auto">
+    <footer className="bg-slate-600 p-2 lg:h-[4.75rem] text-white">
+      <div className="flex flex-col-reverse gap-4 lg:flex-row justify-around max-w-6xl mx-auto">
         <div className="flex flex-col gap-2 items-center justify-center">
           <div className="flex gap-4">
             <a
