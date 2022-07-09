@@ -35,7 +35,7 @@ const menu = ({menuData2}) => {
 
 
 export async function getStaticProps() {
-  const res = await fetch('https://sheets.googleapis.com/v4/spreadsheets/1c37CH30J1qQCEMfZ_l_j_Tbf_ndoyLxBCTQPRNIVVcE/values/Sheet1?alt=json&key=AIzaSyA3f6FpZJJ2Kjd20UiVTG_d4GSHylGaP1Y')
+  const res = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/1c37CH30J1qQCEMfZ_l_j_Tbf_ndoyLxBCTQPRNIVVcE/values/Sheet1?alt=json&key=${process.env.SHEETS_API_KEY}`)
   const menuData2 = await res.json()
   return {
 
