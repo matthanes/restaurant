@@ -6,7 +6,7 @@ const menu = () => {
   return (
     <>
       <Head>
-        <title>Matt Hanes Portfolio - Web Development</title>
+        <title>Taste of India - Menu</title>
         <meta name="description" content="Take a look at our menu." />
       </Head>
 
