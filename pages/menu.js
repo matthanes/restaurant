@@ -1,8 +1,8 @@
 import Head from "next/head";
-import menuData from "../components/data/menudata.json";
+//import menuData from "../components/data/menudata.json";
 import MenuParser from "../components/MenuParser";
 
-const menu = () => {
+const menu = ({menuData2}) => {
   return (
     <>
       <Head>
@@ -15,14 +15,17 @@ const menu = () => {
         <section className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-x-40 p-8">
           <div>
             <h2 className="font-montaga font-extrabold text-xl bg-rose-600 rounded py-2 mb-2 text-center">Clay Oven Specialties</h2>
-            <MenuParser menuData={menuData} filter="clayoven" />    
+            {/* <MenuParser menuData={menuData} filter="clayoven" />     */}
+            <MenuParser menuData={menuData2['values']} filter="clayoven" />    
           </div>
           <div>
           <h2 className="font-montaga font-extrabold text-xl bg-rose-600 rounded py-2 mb-2 text-center">Entrees</h2>
           <h3 className="text-2xl font-montaga font-bold underline underline-offset-4 mb-3 text-center">Chicken Dishes</h3>
-          <MenuParser menuData={menuData} filter="entrees-chicken" />   
+          {/* <MenuParser menuData={menuData} filter="entrees-chicken" />    */}
+          <MenuParser menuData={menuData2['values']} filter="entrees-chicken" />   
           <h3 className="text-2xl font-montaga font-bold underline underline-offset-4 mb-3 text-center">Lamb Dishes</h3>
-          <MenuParser menuData={menuData} filter="entrees-lamb" />   
+          {/* <MenuParser menuData={menuData} filter="entrees-lamb" />    */}
+          <MenuParser menuData={menuData2['values']} filter="entrees-lamb" />   
           </div>
         </section>
       </main>
@@ -30,4 +33,13 @@ const menu = () => {
   );
 };
 
+
+export async function getStaticProps() {
+  const res = await fetch('https://sheets.googleapis.com/v4/spreadsheets/1c37CH30J1qQCEMfZ_l_j_Tbf_ndoyLxBCTQPRNIVVcE/values/Sheet1?alt=json&key=AIzaSyA3f6FpZJJ2Kjd20UiVTG_d4GSHylGaP1Y')
+  const menuData2 = await res.json()
+  return {
+
+    props: {menuData2}
+  }
+}
 export default menu;
