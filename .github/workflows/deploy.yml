@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      SHEETS_API_KEY: ${{ secrets.SHEETS_API_KEY }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
